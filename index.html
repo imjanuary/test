@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>365| LOGO</title>
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!-- css start -->
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
+<!-- css end -->
+
+
+<!-- javascript start -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="jquery.shuffle.min.js"></script>
+
+<script>
+	$(function() {
+		$('#btn li').on('click', function() {
+			var $this = $(this),
+				$grid = $('#animationList');
+				
+			$('#btn .active').removeClass('active');
+			$this.addClass('active');
+			$grid.shuffle($this.data('group'));
+		});
+		
+		$('#animationList').shuffle({
+			group: 'all',
+			speed: 700,
+			easing: 'ease-in-out'
+		});
+	});
+</script>
+<!-- javascript end -->
+</head>
+
+
+<body id="top">
+
+<ul id="btn">
+	<li data-group="all" class="active alpha">ALL</li>
+	<li data-group="red" class="alpha">RED</li>
+	<li data-group="blue" class="alpha">BLUE</li>
+	<li data-group="green" class="alpha">GREEN</li>
+	<li data-group="yellow" class="alpha">YELLOW</li>
+</ul>
+<ul id="animationList">
+	<li data-groups='["red"]'><span class="red">RED</span></li>
+	<li data-groups='["yellow"]'><span class="yellow">YELLOW</span></li>
+	<li data-groups='["blue"]'><span class="blue">BLUE</span></li>
+	<li data-groups='["green"]'><span class="green">GREEN</span></li>
+	<li data-groups='["green"]'><span class="green">GREEN</span></li>
+	<li data-groups='["yellow"]'><span class="yellow">YELLOW</span></li>
+	<li data-groups='["blue"]'><span class="blue">BLUE</span></li>
+	<li data-groups='["red"]'><span class="red">RED</span></li>
+	<li data-groups='["red"]'><span class="red">RED</span></li>
+	<li data-groups='["blue"]'><span class="blue">BLUE</span></li>
+	<li data-groups='["yellow"]'><span class="yellow">YELLOW</span></li>
+	<li data-groups='["green"]'><span class="green">GREEN</span></li>
+</ul>
+
+</body>
+</html>

@@ -121,35 +121,8 @@ body {
 }
 /* basic style end*/
 
-#btn {
-	overflow: hidden;
-	margin-bottom: 40px;
+div {
+	margin: 100px;
 }
-
-#btn li {
-	float: left;
-	margin: 10px;
-	cursor: pointer;
-}
-
-#animationList {
-	overflow: hidden;
-}
-
-#animationList li {
-	width: 220px;
-	height: 220px;
-	padding: 10px;
-	float: left;
-	color: #444444;
-}
-
-#animationList li span {
-	display: block;
-	width: 180px;
-	height: 180px;
-	padding: 20px;
-}
-
 
 /* end */
